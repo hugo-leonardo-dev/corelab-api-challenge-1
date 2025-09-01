@@ -50,7 +50,6 @@ describe('TodosController (e2e)', () => {
           description: 'Description',
           color: '#00FF00',
           isFavorite: true,
-          completed: false,
           userId,
         })
         .expect(201);
@@ -61,7 +60,6 @@ describe('TodosController (e2e)', () => {
         description: 'Description',
         color: '#00FF00',
         isFavorite: true,
-        completed: false,
         userId,
       });
     });

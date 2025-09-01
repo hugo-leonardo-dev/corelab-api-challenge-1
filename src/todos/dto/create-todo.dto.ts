@@ -17,10 +17,6 @@ export class CreateTodoDto {
   @IsBoolean()
   isFavorite?: boolean;
 
-  @IsOptional()
-  @IsBoolean()
-  completed?: boolean;
-
   @IsString()
   userId!: string;
 }
