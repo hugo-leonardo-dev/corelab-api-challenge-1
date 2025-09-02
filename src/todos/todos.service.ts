@@ -11,29 +11,6 @@ export class TodosService {
     return this.prisma.todo.create({ data });
   }
 
-  // async findAll(params: {
-  //   favorite?: boolean;
-  //   color?: string;
-  //   search?: string;
-  // }) {
-  //   const { favorite, color, search } = params;
-  //   const where: any = {};
-  //   if (typeof favorite === 'boolean') where.isFavorite = favorite;
-  //   if (color) where.color = color;
-  //   if (search) where.title = { contains: search, mode: 'insensitive' };
-
-  //   return this.prisma.todo.findMany({
-  //     where,
-  //     orderBy: [{ isFavorite: 'desc' }, { updatedAt: 'desc' }],
-  //   });
-  // }
-
-  // async findOne(id: string) {
-  //   const todo = await this.prisma.todo.findUnique({ where: { id } });
-  //   if (!todo) throw new NotFoundException('Todo not found');
-  //   return todo;
-  // }
-
   async update(id: string, data: UpdateTodoDto) {
     try {
       return await this.prisma.todo.update({ where: { id }, data });

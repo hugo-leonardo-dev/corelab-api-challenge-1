@@ -21,25 +21,6 @@ export class TodosController {
     return this.todosService.create(dto);
   }
 
-  // @Get()
-  // findAll(
-  //   @Query('favorite') favorite?: string,
-  //   @Query('color') color?: string,
-  //   @Query('search') search?: string,
-  // ) {
-  //   return this.todosService.findAll({
-  //     favorite:
-  //       favorite === 'true' ? true : favorite === 'false' ? false : undefined,
-  //     color,
-  //     search,
-  //   });
-  // }
-
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.todosService.findOne(id);
-  // }
-
   @Get('/:userId')
   findByUser(@Param('userId') userId: string) {
     return this.todosService.findByUser(userId);
